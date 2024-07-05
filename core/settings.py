@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-b+$5wugqo%4&wt1+^jy+6x+#p3z*f__c__7(j9-4qp@24nl65n"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Hosts Settings
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com', '0.0.0.0']
@@ -89,8 +89,13 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "touristix",
+        "USER": "postgres",
+        "PASSWORD": "Haim8101040",
+        "HOST": "localhost",
+        "PORT": "5432",
+
     }
 }
 
